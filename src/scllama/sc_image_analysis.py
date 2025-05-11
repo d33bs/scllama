@@ -19,11 +19,8 @@
 
 # + papermill={"duration": 0.441802, "end_time": "2025-04-24T22:42:15.139535", "exception": false, "start_time": "2025-04-24T22:42:14.697733", "status": "completed"}
 import pathlib
-import shutil
 
 import matplotlib.pyplot as plt
-from IPython.display import HTML, display
-from markdown import markdown
 from skimage import io
 from utils import display_response, query_llama_with_image_path
 
@@ -58,10 +55,12 @@ display_response(response)
 response = query_llama_with_image_path(
     image_path=str(file_list[0].resolve()),
     # we might expect around 30 as a response
-    prompt=("How many objects are there in this image?"
-           " I'm looking for single-cell objects which"
-           " include a nucleus and other standard"
-           " cellular compartments."),
+    prompt=(
+        "How many objects are there in this image?"
+        " I'm looking for single-cell objects which"
+        " include a nucleus and other standard"
+        " cellular compartments."
+    ),
 )
 display_response(response)
 

@@ -22,7 +22,7 @@ dependencies = [
   "matplotlib>=3.10.3",
   "pandas>=2.2.3",
   "papermill>=2.6",
-  "poethepoet>=0.34.0",
+  "poethepoet>=0.34",
   "pyarrow>=19.0.1",
   "requests>=2.32.3",
   "scikit-image>=0.25",
@@ -70,9 +70,7 @@ lint.select = [
   "W",
 ]
 # ignore typing rules for demo file
-lint.per-file-ignores."demo_mounted.py" = [ "E501" ]
-lint.per-file-ignores."demo_s3.ipynb" = [ "E501", "W293" ]
-lint.per-file-ignores."demo_s3.py" = [ "E501", "W293" ]
+lint.per-file-ignores."sc_image_analysis.py" = [ "E501" ]
 
 [tool.jupytext]
 formats = "ipynb,py:light"
