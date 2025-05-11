@@ -21,11 +21,8 @@
 
 # + papermill={"duration": 0.441802, "end_time": "2025-04-24T22:42:15.139535", "exception": false, "start_time": "2025-04-24T22:42:14.697733", "status": "completed"}
 import pathlib
-import shutil
 
 import matplotlib.pyplot as plt
-from IPython.display import HTML, display
-from markdown import markdown
 from skimage import io
 from utils import display_response, query_llama_with_image_path
 
@@ -61,11 +58,9 @@ response = query_llama_with_image_path(
     image_path=str(file_list[0].resolve()),
     # we might expect around 30 as a response
     prompt=(
-        (
-            "How many objects are there in this image?"
-            " Specifically, I'm looking for a count with"
-            " a description of how/why and not code."
-        )
+        "How many objects are there in this image?"
+        " Specifically, I'm looking for a count with"
+        " a description of how/why and not code."
     ),
 )
 display_response(response)
